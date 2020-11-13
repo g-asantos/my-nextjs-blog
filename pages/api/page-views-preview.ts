@@ -6,7 +6,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
     const slug = req.query.id;
 
 
-    if(!slug) return res.json({"Página não encontrada"});
+    if(!slug) return res.json("Página não encontrada");
 
     const {db,client} = await connectToDatabase();
 
